@@ -120,6 +120,7 @@ rosetta.animationDurations.dialogAppear.unit;   // 'ms'
 Every Rosetta variable has the following properties:
 * `val` - The 'value' part of the variable. For numbers this means just the number part (e.g. `400` from `400px`). For colors, it will be a 24-bit number (e.g. 0xAC2B39). For URLs, it will be the URL itself. Strings and raw CSS are both just strings.
 * `type` - One of `number`, `color`, `string`, `url`, or `css`.
+* `toString()` - Return the string representation
 
 Some datatypes have additional properties:
 
@@ -131,6 +132,9 @@ Some datatypes have additional properties:
 * `g` - Green (0-255)
 * `b` - Blue (0-255)
 * `a` - Alpha (0-1)
+* `toHex()` - The hexadecimal representation `#XXXXXX` (default toString)
+* `toRgb()` - The rgb representation `rgb(xx, xx, xx)`
+* `toRgba()` - The rgba representation `rgba(xx, xx, xx, xx)`
 
 ### CSS
 All your variables will be exported to the format you specified, e.g.
